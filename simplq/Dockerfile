@@ -1,10 +1,10 @@
 FROM node:14.16-alpine AS build
 
-ARG BASE_URL="https://devbackend.simplq.me/v1"
+ARG HOME_URL="https://devbackend.simplq.me/v1"
 
-RUN echo ${BASE_URL}
+RUN echo ${HOME_URL}
 
-RUN echo "BASE_URL=${BASE_URL}" > .env
+RUN echo "HOME_URL=${HOME_URL}" > .env
 
 WORKDIR /build
 COPY . .
